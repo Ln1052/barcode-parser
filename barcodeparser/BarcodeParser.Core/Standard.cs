@@ -9,5 +9,12 @@ namespace BarcodeParser.Core
     // TODO: decide abstract class vs interface
     public abstract class Standard
     {
+        // only getters?
+        public string Name { get; set; }
+
+        public int RevisionNumber { get; set; }
+
+        public DateTime RevisionDate { get; set; }
+
     }
 }
