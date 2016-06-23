@@ -40,11 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Standard.cs" />
+    <Compile Include="BarcodeParser.cs" />
+    <Compile Include="BarcodeResult.cs" />
+    <Compile Include="IBarcodeParser.cs" />
+    <Compile Include="Standards\StandardB.cs" />
+    <Compile Include="IStandard.cs" />
     <Compile Include="StandardFactory.cs" />
+    <Compile Include="Standards\StandardA.cs" />
     <Compile Include="StockItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

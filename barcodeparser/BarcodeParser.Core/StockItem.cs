@@ -19,7 +19,7 @@ namespace BarcodeParser.Core
         #endregion
 
         #region standard information
-        public Standard StandardInformation { get; set; }
+        public IStandard StandardInformation { get; set; }
         #endregion
     }
 }

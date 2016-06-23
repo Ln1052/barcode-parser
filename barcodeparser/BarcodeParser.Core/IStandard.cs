@@ -7,14 +7,13 @@ using System.Threading.Tasks;
 namespace BarcodeParser.Core
 {
     // TODO: decide abstract class vs interface
-    public abstract class Standard
+    public interface IStandard
     {
         // only getters?
-        public string Name { get; set; }
+        string Name { get; }
 
-        public int RevisionNumber { get; set; }
+        int RevisionNumber { get; }
 
-        public DateTime RevisionDate { get; set; }
-
+        string RevisionDate { get; }
     }
 }

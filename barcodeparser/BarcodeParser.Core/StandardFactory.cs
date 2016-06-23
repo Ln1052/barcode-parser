@@ -1,13 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BarcodeParser.Core
 {
-    public interface IStandardFactory<TStandard>
+    public class StandardFactory
     {
-        TStandard GetStandard(string barcode);
+        public IStandard GetStandard(string barcode)
+        {
+            // There is probably a regular expression pattern to match
+            // This is just a quick implementation of a factory method.
+            switch (barcode[0])
+            {
+                case '*':
+                    return new Standards.StandardARev1();
+                case '+':
+                    return new Standards.StandardARev2();
+                case '(':
+                    return new Standards.StandardBRev1();
+                default:
+                    throw new ArgumentException("Invalid barcode input");
+            }
+        }
     }
 }
