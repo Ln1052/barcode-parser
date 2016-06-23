@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BarcodeParser.cs" />
-    <Compile Include="BarcodeResult.cs" />
+    <Compile Include="StockItemBarcodeParser.cs" />
+    <Compile Include="StockItemBarcodeResult.cs" />
     <Compile Include="IBarcodeParser.cs" />
     <Compile Include="Standards\StandardB.cs" />
     <Compile Include="IStandard.cs" />

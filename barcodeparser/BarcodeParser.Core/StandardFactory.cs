@@ -6,14 +6,15 @@ namespace BarcodeParser.Core
     {
         public IStandard GetStandard(string barcode)
         {
-            // There is probably a regular expression pattern to match
-            // This is just a quick implementation of a factory method.
+            // This is a very quick 'leading character' way of extrapolating the type of standard used.
+            // This is not meant to be a final implementation.
+            
             switch (barcode[0])
             {
                 case '*':
-                    return new Standards.StandardARev1();
+                    return new Standards.StandardARev1(barcode);
                 case '+':
-                    return new Standards.StandardARev2();
+                    return new Standards.StandardARev2(barcode);
                 case '(':
                     return new Standards.StandardBRev1();
                 default:

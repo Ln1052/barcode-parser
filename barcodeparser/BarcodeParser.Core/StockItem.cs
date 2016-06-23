@@ -8,18 +8,20 @@ namespace BarcodeParser.Core
 {
     public class StockItem
     {
-        #region output members
-        public int ItemNumber { get; set; }
+        internal StockItem(int itemNumber, int? serial, int? lot, DateTime expirationDate)
+        {
+            this.ItemNumber = itemNumber;
+            this.Serial = serial;
+            this.Lot = lot;
+            this.ExpirationDate = expirationDate;
+        }
+
+        public int ItemNumber { get; }
 
         public int? Serial { get; set; }
 
         public int? Lot { get; set; }
 
         public DateTime ExpirationDate { get; set; }
-        #endregion
-
-        #region standard information
-        public IStandard StandardInformation { get; set; }
-        #endregion
     }
 }

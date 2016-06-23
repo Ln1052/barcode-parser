@@ -19,7 +19,7 @@ namespace BarcodeParser.Core.Standards
             get { return 1; }
         }
 
-        public StockItem Parse(string barcode)
+        public StockItem Parse()
         {
             throw new NotImplementedException();
         }
