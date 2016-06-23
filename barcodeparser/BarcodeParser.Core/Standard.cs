@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BarcodeParser.Core
 {
-    public class Class1
+    // TODO: decide abstract class vs interface
+    public abstract class Standard
     {
     }
 }
