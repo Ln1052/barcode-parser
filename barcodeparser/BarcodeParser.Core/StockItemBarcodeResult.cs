@@ -5,7 +5,7 @@
         public IStandard Standard { get; }
         public StockItem StockItem { get; }
 
-        public StockItemBarcodeResult(IStandard standard, StockItem stockItem)
+        internal StockItemBarcodeResult(IStandard standard, StockItem stockItem)
         {
             this.Standard = standard;
             this.StockItem = stockItem;
