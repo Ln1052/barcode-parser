@@ -10,7 +10,7 @@ namespace BarcodeParser.Core
     {
         public StockItemBarcodeResult GetBarcodeData(string barcode)
         {
-            var standard = new StandardFactory().GetStandard(barcode);
+            var standard = StandardFactory.GetStandard(barcode);
             return this.BuildResultObject(barcode, standard);
         }
 

@@ -15,7 +15,7 @@ namespace BarcodeParser.Core.Tests
             var expectedRevision = 1;
             var expectedRevisionDate = new DateTime(1993, 1, 10).ToShortDateString();
 
-            var actual = new StandardFactory().GetStandard(barcode);
+            var actual = StandardFactory.GetStandard(barcode);
 
             Assert.AreEqual(expectedName, actual.Name);
             Assert.AreEqual(expectedRevision, actual.RevisionNumber);
@@ -31,7 +31,7 @@ namespace BarcodeParser.Core.Tests
             var expectedRevision = 2;
             var expectedRevisionDate = new DateTime(2006, 5, 10).ToShortDateString();
 
-            var actual = new StandardFactory().GetStandard(barcode);
+            var actual = StandardFactory.GetStandard(barcode);
 
             Assert.AreEqual(expectedName, actual.Name);
             Assert.AreEqual(expectedRevision, actual.RevisionNumber);
@@ -43,7 +43,7 @@ namespace BarcodeParser.Core.Tests
         public void StandardFactoryInvalidFormatTest()
         {
             var barcode = "xA123BJC5D6E71G*";
-            var actual = new StandardFactory().GetStandard(barcode);
+            var actual = StandardFactory.GetStandard(barcode);
         }
 
         [TestMethod]
@@ -54,7 +54,7 @@ namespace BarcodeParser.Core.Tests
             var expectedStockItemSerial = 456;
             var expectedExpirationDate = new DateTime(2016, 12, 31);
 
-            var actual = new StandardFactory().GetStandard(barcode).Parse();
+            var actual = StandardFactory.GetStandard(barcode).Parse();
             Assert.AreEqual(expectedStockItemNumber, actual.ItemNumber);
             Assert.AreEqual(expectedStockItemSerial, actual.Serial);
             Assert.IsNull(actual.Lot);

@@ -2,9 +2,9 @@
 
 namespace BarcodeParser.Core
 {
-    public class StandardFactory
+    public static class StandardFactory
     {
-        public IStandard GetStandard(string barcode)
+        public static IStandard GetStandard(string barcode)
         {
             // This is a very quick 'leading character' way of extrapolating the type of standard used.
             // This is not meant to be a final implementation.
